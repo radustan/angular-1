@@ -1,0 +1,23 @@
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th ng-repeat="theader in tableHeaders">
+                {{theader}}
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="message in messages">
+            <td>
+                {{message.name}}
+            </td>
+            <td>
+                {{message.email}}
+            </td>
+            <td>
+                {{message.message}}
+            </td>
+        </tr>
+    </tbody>
+</table>
