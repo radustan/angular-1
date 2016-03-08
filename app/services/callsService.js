@@ -4,7 +4,7 @@ var callsService = angular.module('App1.callsService', [])
         getCategories: function(type) {
             //return the promise directly.
             return $http({
-                url: config.apiUrl + 'chartData.php',
+                url: config.apiUrl + 'angular/chartData',
                 method: "GET",
                 params: {type: type}
             }).then(function(result) {
