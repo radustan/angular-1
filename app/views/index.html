@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Testing angular</title>
+
+    <!-- Bootstrap -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+</head>
+<body ng-controller="MainController">
+    <header>
+        <nav class="navbar navbar-default navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/ang/angular/ang2/#">{{title}}</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li ng-repeat="item in menu" ng-class="{ active: isActive('/{{item.name}}')}">
+                        <a href="#{{item.name}}">{{item.label}}</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container theme-showcase" role="main">
+        <div class="jumbotron">
+            <h1>{{page}}</h1>
+        </div>
+
+        <!-- MAIN CONTENT AND INJECTED VIEWS -->
+        <div id="main">
+            <!-- angular templating -->
+            <div ng-view></div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/highcharts/highcharts.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/MainController.js"></script>
+    <script src="app/controllers/AboutController.js"></script>
+    <script src="app/controllers/ContactController.js"></script>
+    <script src="app/directives/hcAreaChart.js"></script>
+    <script src="app/services/callsService.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
