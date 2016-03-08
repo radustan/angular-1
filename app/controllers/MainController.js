@@ -6,17 +6,17 @@ var MainController = angular.module('App1.MainController', [])
             return viewLocation === $location.path();
         };
 
-        callsService.getCategories('categories').then(function(data) {
-            $scope.categories = data;
-        });
+        //callsService.getCategories('categories').then(function(data) {
+            $scope.categories = [];//data;
+       // });
 
-        callsService.getCategories('title').then(function(data) {
-            $scope.chartTitle = data;
-        });
+       // callsService.getCategories('title').then(function(data) {
+            $scope.chartTitle = 'Title';//data;
+       // });
 
-        callsService.getCategories('series').then(function(data) {
-            $scope.chartAreaData = data;
-        });
+       // callsService.getCategories('series').then(function(data) {
+            $scope.chartAreaData = [];//data;
+       // });
 
         $scope.menu = [
             {
