@@ -40,6 +40,6 @@ app.config(function($routeProvider) {
 app.constant('config', {
     appName: 'My App',
     appVersion: 2.0,
-    apiUrl: '/ang/angular/ang2/phpApp/'
+    apiUrl: 'https://angular-php-1.herokuapp.com/'
 });
 
